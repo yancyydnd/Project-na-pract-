@@ -1,0 +1,176 @@
+/* Import Google Fonts based on the style guide */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&family=Roboto:wght@300;400;500&family=Lato:wght@300;400;700&family=Nunito+Sans:wght@400;600&display=swap');
+
+/* Global styles */
+body {
+    font-family: 'Roboto', 'Open Sans', 'Lato', sans-serif; /* Body Text fallback */
+    font-size: 16px; /* Body Text size */
+    font-weight: 400; /* Regular */
+    background-color: #000000;
+    margin: 0;
+    padding: 20px;
+    color: #000000;
+    line-height: 1.5; /* Improves readability for body text */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgb(211, 111, 17);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Poppins', 'Montserrat', 'Open Sans', sans-serif; /* H1 font */
+    font-size: 36px; /* Within 32–40px range */
+    font-weight: 700; /* Bold */
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list {
+    min-height: 100px; /* Ensures space even if empty */
+}
+
+li {
+    font-family: 'Roboto', 'Open Sans', 'Lato', sans-serif; /* Body Text */
+    font-size: 16px; /* Body Text size */
+    font-weight: 400; /* Regular */
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 4px solid #4a90e2;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes delete button to the right */
+    position: relative;
+}
+
+li input[type="checkbox"] {
+    margin-right: 15px;
+    transform: scale(1.2);
+    order: -1; /* Puts checkbox at the start */
+}
+
+li .task-text {
+    flex-grow: 1; /* Takes up remaining space */
+    margin-right: 10px;
+}
+
+li .delete-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #e72610;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+li .delete-btn:hover {
+    background-color: #f8f8f8;
+}
+
+li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    background-color: #e8f5e8;
+    border-left-color: #27ae60;
+}
+
+li.completed .delete-btn {
+    color: #e20f0f; /* This is for x for remove task */
+}
+
+.add-item {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.add-item input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 70%;
+    margin-right: 10px;
+    font-family: 'Roboto', 'Open Sans', 'Lato', sans-serif; /* Body Text for input */
+    font-size: 16px;
+     cursor: pointer;
+}
+
+.add-item button {
+    font-family: 'Poppins', 'Lato', sans-serif; /* Buttons font */
+    font-size: 16px; /* Buttons size */
+    font-weight: 700; /* Bold */
+    padding: 10px 20px;
+    background-color: #dfdfdf;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-item button:hover,
+.add-item button:active {
+    background-color: #357abd;
+}
+
+.caption {
+    font-family: 'Roboto', 'Nunito Sans', sans-serif; /* Caption font */
+    font-size: 14px; /* Within 12–14px range */
+    font-weight: 400; /* Regular */
+    font-style: italic; /* Optional italic for emphasis, as per guide */
+    text-align: center;
+    color: #000000;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Additional styles for potential H2/H3 if expanded (not used in this page but ready) */
+h2 {
+    font-family: 'Poppins', 'Roboto', sans-serif; /* H2 font */
+    font-size: 26px; /* Within 24–28px range */
+    font-weight: 600; /* Semi-Bold */
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-family: 'Roboto', 'Lato', sans-serif; /* H3 font */
+    font-size: 21px; /* Within 20–22px range */
+    font-weight: 500; /* Medium */
+    color: #050000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Links example (if added, e.g., <a> tags) */
+a {
+    font-family: 'Poppins', 'Lato', sans-serif; /* Buttons/Links font */
+    font-size: 16px;
+    font-weight: 700; /* Bold */
+    text-transform: uppercase; /* Uppercase as per guide */
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
